@@ -6,10 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.Profile;
 
-import hello.itemservice.config.JdbcTemplateV3Config;
-import hello.itemservice.config.JpaConfig;
-import hello.itemservice.config.MyBatisConfig;
-import hello.itemservice.config.SpringDataJpaConfig;
+import hello.itemservice.config.QuerydslConfig;
 import hello.itemservice.repository.ItemRepository;
 
 
@@ -19,7 +16,8 @@ import hello.itemservice.repository.ItemRepository;
 // @Import(JdbcTemplateV3Config.class)
 // @Import(MyBatisConfig.class)
 // @Import(JpaConfig.class)
-@Import(SpringDataJpaConfig.class)
+// @Import(SpringDataJpaConfig.class)
+@Import(QuerydslConfig.class)
 @SpringBootApplication(scanBasePackages = "hello.itemservice.web")
 public class ItemServiceApplication {
 
